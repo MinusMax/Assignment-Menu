@@ -1,0 +1,123 @@
+
+body h1 {
+    font-weight: bolder;
+    font-size: 50px;
+    text-align: center;
+}
+
+.FrameWork-Container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px; 
+    padding: 20px;
+    background-color: #f9f9f9; 
+}
+
+.Framework {
+    width: 600px; 
+    border: 2px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    position: relative;
+    background-color: gray; 
+}
+
+
+.Framework p {
+    padding: 30px 10px 2px 10px;
+    color: black;
+    line-height: 1.5; 
+    font-weight: bold;
+}
+
+
+.Label-box {
+    width: 160px; 
+    height: 45px; 
+    background-color: #f4b6b6; 
+    border: 2px solid black;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: -10px;
+    left: 10px;
+    float: right;
+}
+
+
+.Label-box label {
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+
+.Framework:nth-child(1) .Label-box {
+    background-color: #f4b6b6; 
+}
+
+.Framework:nth-child(2) .Label-box {
+    background-color: #d9534f; 
+    color: white;
+}
+
+.Framework:nth-child(3) .Label-box {
+    background-color: #f7e8a2; 
+}
+
+@media (min-width: 1024px) {
+    .FrameWork-Container {
+        justify-content: space-between;
+    }
+
+    .Framework {
+        width: 600px; 
+    }
+
+    .Label-box {
+        width: 160px; 
+        height: 40px;
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .FrameWork-Container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; 
+        gap: 20px; 
+    }
+
+    .Framework {
+        flex: 1 1 calc(50% - 20px); 
+        margin-bottom: 20px; 
+    }
+
+    .Framework:nth-child(3) {
+        flex: 1 1 100%; 
+    }
+
+    .Label-box {
+        width: 110px; 
+        height: 45px;
+        font-size: 1.1em;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .FrameWork-Container {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    .Framework {
+        width: 90%; 
+        margin-bottom: 20px; 
+    }
+}
